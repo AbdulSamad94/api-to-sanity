@@ -1,6 +1,5 @@
-// app/api/upload/route.ts
 import { NextResponse } from 'next/server';
-import { client } from "@/sanity/lib/client"; // Import your Sanity client
+import { client } from "@/sanity/lib/client";
 
 // Define the type for your product data
 interface Product {
@@ -22,7 +21,7 @@ interface Product {
 // Function to fetch data from the API
 async function fetchData(): Promise<Product[] | null> {
     try {
-        const response = await fetch('https://677e415694bde1c1252b1eee.mockapi.io/inventory');
+        const response = await fetch('your api url');
         if (!response.ok) {
             throw new Error(`HTTP error! Status: ${response.status}`);
         }
@@ -47,24 +46,20 @@ async function uploadProducts() {
         // Loop through each product and create a document in Sanity
         for (const product of products) {
             const sanityProduct = {
-                _type: 'product', // Must match the schema name
-                id: product.id,
-                productName: product.productName,
-                productDescription: product.productDescription,
-                price: product.price,
-                prevPrice: product.prevPrice,
-                stock: product.stock,
-                productImage: product.productImage, // Image URL as a string
-                tag: product.tag,
-                shipmentArray: product.shipmentArray.map((shipment) => ({
-                    _type: 'shipment',
-                    trackingId: shipment.trackingId,
-                    deliveryStatus: shipment.deliveryStatus,
-                    estimatedDeliveryDate: shipment.estimatedDeliveryDate,
-                })),
+                // _type: 'product', // Must match the schema name
+                // id: product.id,
+                // productName: product.productName,
+                // productDescription: product.productDescription,
+                // price: product.price,
+                // prevPrice: product.prevPrice,
+                // stock: product.stock,
+                // productImage: product.productImage, // Image URL as a string
+                // tag: product.tag,
+
+                //set up according to your schema 
+                
             };
 
-            // Upload the product to Sanity
             await client.create(sanityProduct);
         }
 
