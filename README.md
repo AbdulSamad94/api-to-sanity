@@ -98,4 +98,5 @@ export const schema: { types: SchemaTypeDefinition[] } = {
 
 # Step 4
 
-1. Make an api route
+1. Make an api route `src/app/api/upload/route.ts`
+2. Now go to the 
