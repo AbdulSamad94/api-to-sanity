@@ -2,4 +2,4 @@
 
 Go to [MockAPI.io](https://mockapi.io) to get started.
 
-![MockAPI.io Screenshot](images/mockapi-screenshot.png)
+![MockAPI.io Screenshot](/public/step-1.jpeg)
