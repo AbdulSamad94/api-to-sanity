@@ -1,8 +1,6 @@
 # Getting Started
 
-# Installation
-
-# Step 1
+# Step 1 (Installation)
 
 - Install Next.js
 ```bash
@@ -14,7 +12,7 @@
  npm create sanity@latest
 ```
 
-# Step 2
+# Step 2 (Making fake-api)
 
 1. Go to [MockAPI.io](https://mockapi.io) to get started.
 2. Make Account & Login
@@ -49,7 +47,7 @@ Note : If it says invalid JSON check the data it should be in JSON format
 
 11. Click on the url you will be redirected to the api url
 
-# Step 3
+# Step 3 (Token Generation)
 
 1. Go to the Sanity.io and go to that project then go to API section
 2. Go to Token Section
@@ -96,7 +94,14 @@ export const schema: { types: SchemaTypeDefinition[] } = {
 }
 ```
 
-# Step 4
+# Step 4 (Running function)
 
 1. Make an api route `src/app/api/upload/route.ts`
-2. Now go to the 
+2. Now paste the code that i provided of the route
+3. Note : things that you define should match your schema or data
+4. Use ThunderClient, PostMan or navigate to `http://localhost:3000/api/upload` on your browser
+5. `
+   {"message":"All products uploaded successfully!"}
+   ` this message should be showed
+6. Now navigate to `http://localhost:3000/studio` or any route that you provided while sanity installation `http://localhost:3000/yourRoute`
+7. Your data will be showed there
